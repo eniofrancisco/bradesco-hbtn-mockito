@@ -1,18 +1,20 @@
-# Projeto: Mockito – Serviço Matemático
+# Projeto: Mockito – Serviço Bancário
 
-#Este projeto demonstra o uso de Mockito para testar uma classe 'Calculadora' que depende de um serviço matemático.
+Este projeto demonstra como testar um serviço bancário usando Mockito para simular o repositório de contas.
 
 ## 📂 Estrutura
 
-- 'src/main/java/mockito/ServicoMatematico.java': Interface com método 'somar(int a, int b)`
-- 'src/main/java/mockito/ServicoMatematicoImpl.java': Implementação que retorna a soma de 'a' e 'b'
-- 'src/main/java/mockito/Calculadora.java': Classe que usa 'ServicoMatematico' para calcular somas
-- 'src/test/java/mockito/CalculadoraTest.java': Teste unitário com Mockito simulando o serviço
+- : modelo de conta com número e saldo
+- : interface simulando acesso ao banco de dados
+- : serviço bancário que depende do repositório
+- : testes unitários usando Mockito
 
-## 🧪 Teste com Mockito
+## 🧪 Testes
 
-O teste cria um mock de 'ServicoMatematico' e configura o retorno de 'somar(2, 3)' como '5'. Em seguida, verifica se o resultado da 'Calculadora' é igual a '5'.
+- : verifica se o saldo retornado está correto e se o método  foi chamado
+- : simula um depósito e verifica se o saldo foi atualizado e os métodos foram invocados corretamente
 
 ## 🚀 Como executar
 
 '''bash
+mvn test
